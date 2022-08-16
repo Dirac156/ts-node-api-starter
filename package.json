@@ -1,0 +1,31 @@
+{
+  "name": "ts-node-api-starter",
+  "version": "1.0.0",
+  "description": "Boiler plate",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dirac156/ts-node-api-starter.git"
+  },
+  "keywords": [
+    "node",
+    "ts-node",
+    "express",
+    "pm2",
+    "github-actions",
+    "ci/cd"
+  ],
+  "author": "Dirac Murairi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dirac156/ts-node-api-starter/issues"
+  },
+  "homepage": "https://github.com/Dirac156/ts-node-api-starter#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.5"
+  }
+}
