@@ -3,7 +3,8 @@ name: Deploy on dev site
 on:
   push:
     branches:
-      - main
+      # replace my branch to the branch where you want to deploy
+      - my_branch
 
 jobs:
   # test code pushed
@@ -49,6 +50,6 @@ jobs:
           switches: -avzr --delete
           path: ./*
           remote_path: "${{ secrets.SSH_REMOTE_PATH }}"
-          remote_host: "${{ secrets.SSH_REMOTE_HOST_DEV }}"
+          remote_host: "${{ secrets.SSH_REMOTE_HOST }}"
           remote_user: " ${{ secrets.SSH_REMOTE_USER }}"
-          remote_key: "${{ secrets.SSH_PRIVATE_KEY_DEV }}"
+          remote_key: "${{ secrets.SSH_PRIVATE_KEY }}"
