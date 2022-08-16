@@ -1,15 +1,14 @@
 name: CI
 
 on:
-  push:
-    branches:
-      # replace my branch to the branch where you want to deploy
-      - my_branch
+  push: 
+    branches: [ main, master ]
+  pull_request:
+    branches: [main, master ]
 
 jobs:
   # test code pushed
   check-pull-request:
-    if: (github.event_name == 'push') || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true)
     strategy:
       fail-fast: false
       matrix:
@@ -22,7 +21,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Test
+      - name: Run all tests
         run: | 
           npm install
           npm run test
